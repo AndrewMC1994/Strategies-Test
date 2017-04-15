@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title></title>
+</head>
+
+<body>
+   
+<h1>Oblique Strategies</h1>
+
+<FORM NAME="WordForm">  
+<INPUT TYPE=TEXT NAME="textbox" id="textbox"><BR>
+<INPUT TYPE=BUTTON VALUE="Click Me" onClick="PickRandomWord(document.WordForm);" id="button">
+</FORM>
+   
+   <script>
+      
+var NumberOfWords = 28
+
+var words = new BuildArray(NumberOfWords)
+
+// Use the following variables to 
+// define your random words:
+words[1] = "Do something boring"
+words[2] = "Where is the edge?"
+words[3] = "Discover your formulas and abandon them"
+words[4] = "Only one element of each kind"
+words[5] = "Do something boring"
+words[6] = "You don’t have to be ashamed of using your own ideas"
+words[7] = "Tidy up"
+words[8] = "Take a break"
+words[9] = "Is it finished?"
+words[10] = "Change specifics to ambiguities"
+words[11] = "Use filters"
+words[12] = "Discover your formulas and abandon them"
+words[13] = "Turn it upside down"
+words[14] = "Distort time"
+words[15] = "Be dirty"
+words[16] = "What wouldn’t you do?"
+words[17] = "Change nothing and continue consistently"
+words[18] = "Use ‘unqualified’ people"
+words[19] = "Display your talent"
+words[20] = "It is simply a matter or work"
+words[21] = "Courage!"
+words[22] = "What to increase? What to reduce? What to maintain?"
+words[23] = "What wouldn’t you do?"
+words[24] = "Breathe more deeply"
+words[25] = "Give the game away"
+words[26] = "Be less critical"
+words[27] = "Work at a different speed"
+words[28] = "Is the style right?"
+
+function BuildArray(size) {
+  this.length = size
+  for (var i = 1; i <= size; i++) {
+    this[i] = null
+  }
+  return this
+}
+
+function PickRandomWord(frm) {
+  // Generate a random number between 1 and NumberOfWords
+  var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+  // Display the word inside the text box
+  frm.textbox.value = words[rnd]
+}  
+      
+      </script>
+    
+</body>
+</html>
+
